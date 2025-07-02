@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodBunny - On-Demand Delivery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --pink: #ff2e63;
+      --light-pink: #ffe2e9;
+      --soft-white: #fff6f6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, var(--soft-white), var(--light-pink));
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--pink), #ff6f61);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-text {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .catalog {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 40px rgba(255, 46, 99, 0.15);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .order-btn {
+      background: linear-gradient(90deg, var(--pink), #ff6f61);
+      color: white;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 0.9rem 1.6rem;
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(255, 46, 99, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background: #e02457;
+      box-shadow: 0 6px 20px rgba(255, 46, 99, 0.4);
+    }
+
+    .about {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 960px;
+      border-radius: 20px;
+      border: 1px solid #ffc0cb;
+      box-shadow: 0 0 14px rgba(255, 110, 150, 0.2);
+    }
+
+    .about h2 {
+      color: var(--pink);
+      text-align: center;
+      margin-bottom: 1.2rem;
+      font-size: 1.7rem;
+    }
+
+    .about p {
+      font-size: 1rem;
+      margin: 1rem 0;
+      text-align: justify;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      font-size: 28px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 60px;
+      z-index: 999;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #20b85b;
+    }
+
+    footer {
+      background-color: #ffe3ec;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      font-weight: 500;
+      border-top: 1px solid #ffc0cb;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        max-width: 90%;
+      }
+      .logo-text {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-text">FoodBunny</div>
+  </header>
+
+  <section class="catalog">
+    <div class="card">
+      <h3>🥦 Fresh Groceries</h3>
+      <a class="order-btn" href="https://wa.me/923182341891?text=Hi%2C%20I%20want%20to%20order%20Groceries%20from%20FoodBunny" target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="card">
+      <h3>💊 Medicines</h3>
+      <a class="order-btn" href="https://wa.me/923182341891?text=Hi%2C%20I%20want%20to%20order%20Medicines%20from%20FoodBunny" target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="card">
+      <h3>🍔 Fast Food</h3>
+      <a class="order-btn" href="https://wa.me/923182341891?text=Hi%2C%20I%20want%20to%20order%20Fast%20Food%20from%20FoodBunny" target="_blank">Order via WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About FoodBunny</h2>
+    <p>FoodBunny aapki trusted On-Demand Delivery Service hai Chakwal City mein aur aas-paas ke gaonon — jo bhi cheez aapko chahiye, hum use seedha aapke doorstep tak laate hain.</p>
+    <p>We proudly provide:<br>
+      🥦 Fresh Groceries & Vegetables<br>
+      💊 Medicines from Trusted Pharmacies<br>
+      🍔 Fast Food from Local Restaurants<br>
+      🏠 Homemade Meals made with care<br>
+      🍓 Fruits, Dairy, and Daily Essentials</p>
+    <p>Chahe aap ghar par hoon, office mein, ya kisi paas ke gaon mein — FoodBunny aap tak fast, safe aur affordable delivery pahunchata hai.</p>
+    <p>Hamara mission hai aapka time bachana, khana banane ka tension kam karna, aur local businesses ko support karna — aap se unhe connect karke, ek delivery ke zariye.</p>
+    <p>🛵 Rozana Delivery Chakwal City aur Qareebi Gaon Tak<br>
+      📞 Easy Ordering via WhatsApp — WhatsApp par Aasaan Order Kare<br>
+      💰 Transparent Rates — No Hidden Charges</p>
+    <p><strong>FoodBunny — Ghar ka khana, bazar ka saman, sab kuch ek jagah.</strong></p>
+  </section>
+
+  <a href="https://wa.me/923182341891?text=Hi%2C%20I%20want%20to%20order%20from%20FoodBunny"
+     class="whatsapp-float"
+     target="_blank"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    Next site where you can place an order — <strong>Coming Soon...</strong>
+  </footer>
+
+</body>
+</html>
